@@ -1,0 +1,21 @@
+body{background-color: #777;
+}
+#map{
+    border: 3px solid #999;
+    cursor:url(target.png ),auto;
+}
+#bird{
+    width: 48px;
+    height: 48px;
+    border: 1px solid transparent;
+background-image: url(bird1.png);}
+#scoreDisplay{
+    color: darkred;
+    font-size: large;
+margin:50px 40px;
+background-color: greenyellow;
+width: 400px;
+height: 30px;
+border: 1px solid black;
+text-align: center;
+}
