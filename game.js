@@ -25,11 +25,15 @@ const moveBird=()=>{
         score=`"Game over"` 
         scoreDisplay.innerHTML = score
         clearInterval(intervalID)
-        bird.style.transition=`0s`
-        bird.style.transform=`translateX(${birdLeft}px) 
-        translateY(${MAP_H + 10}px)  
-        scaleX(${direction=="left" ? -1 : 1})
-        rotate(0turn)`
+        birdTop=500
+        birdLeft=250
+        speedX=0
+        
+        // bird.style.transition=`0s`
+        // bird.style.transform=`translateX(${birdLeft}px) 
+        // translateY(${MAP_H + 10}px)  
+        // scaleX(${direction=="left" ? -1 : 1})
+        // rotate(0turn)`
         scoreDisplay.innerHTML+=`<button onclick="startBird()">Start again</button>`
     }
     birdLeft+=speedX
