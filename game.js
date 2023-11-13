@@ -9,6 +9,7 @@ let speedX=1
 let direction="right"
 let score=0
 let intervalID
+let StartIntervalID
 const initGame=()=>{
     map.style.width= `${MAP_W}px`
     map.style.height= `${MAP_H}px`
@@ -24,16 +25,16 @@ const moveBird=()=>{
     if(birdTop>MAP_H ){ 
         score=`"Game over"` 
         scoreDisplay.innerHTML = score
-        clearInterval(intervalID)
-        birdTop=500
-        birdLeft=250
+        clearInterval(StartIntervalID)
+         birdTop=500
+         birdLeft=250
         speedX=0
         
-        // bird.style.transition=`0s`
+        //  bird.style.transition=`0s`
         // bird.style.transform=`translateX(${birdLeft}px) 
-        // translateY(${MAP_H + 10}px)  
-        // scaleX(${direction=="left" ? -1 : 1})
-        // rotate(0turn)`
+        //  translateY(${MAP_H + 10}px)  
+        //  scaleX(${direction=="left" ? -1 : 1})
+        //  rotate(0turn)`
         scoreDisplay.innerHTML+=`<button onclick="startBird()">Start again</button>`
     }
     birdLeft+=speedX
@@ -72,7 +73,7 @@ const SHOOT=function(){
         translateY(${MAP_H}px)  
         scaleX(${direction=="left" ? -1 : 1})
         rotate(3.5turn)`
-        setInterval(startBird,2000)
+        StartIntervalID=setInterval(startBird,2000)
 }
     }
 
